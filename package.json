@@ -1,0 +1,28 @@
+{
+  "name": "components-grading",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "storybook": "^8.3.6",
+    "@storybook/react": "^8.3.6",
+    "@storybook/react-webpack5": "^8.3.6",
+    "@storybook/blocks": "^8.3.6",
+    "@storybook/addon-webpack5-compiler-swc": "^1.0.5",
+    "@storybook/addon-onboarding": "^8.3.6",
+    "@storybook/addon-links": "^8.3.6",
+    "@storybook/addon-essentials": "^8.3.6",
+    "@chromatic-com/storybook": "^1.9.0",
+    "@storybook/test": "^8.3.6",
+    "@storybook/addon-interactions": "^8.3.6",
+    "prop-types": "^15.8.1"
+  }
+}
