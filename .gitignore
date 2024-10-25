@@ -31,3 +31,5 @@ coverage/
 
 # Miscellaneous
 *.lock
+
+*storybook.log
