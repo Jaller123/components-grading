@@ -1,3 +1,5 @@
+/* src/components/Login/Login.module.css */
+
 .container {
   display: flex;
   flex-direction: column;
@@ -42,6 +44,15 @@
 .errorText {
   color: red;
   border: 1px dashed red;
+  padding: 5px;
+  margin-top: 10px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.successText {
+  color: green;
+  border: 1px dashed green;
   padding: 5px;
   margin-top: 10px;
   border-radius: 4px;
