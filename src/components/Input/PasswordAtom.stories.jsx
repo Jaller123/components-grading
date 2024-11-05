@@ -14,7 +14,7 @@ const Template = (args) => {
 };
 
 export default {
-    title: 'Components/PasswordAtom',
+    title: 'Components/Input/PasswordAtom',
     component: PasswordAtom,
     render: Template,
 };

@@ -1,7 +1,8 @@
+// src/components/Login/LoginMolecule.jsx
 import React, { useState } from 'react';
 import styles from './Login.module.css';
-import UserAtom from './UserAtom';
-import PasswordAtom from './PasswordAtom';
+import UserAtom from '../Input/UserAtom';
+import PasswordAtom from '../Input/PasswordAtom';
 import LoginButtonAtom from './LoginButtonAtom';
 import { loginUser } from '../api'
 

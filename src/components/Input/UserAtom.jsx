@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Login.module.css';
+import styles from '../Login/Login.module.css';
 
 const UserAtom = ({ username, onUsernameChange }) => {
     const handleChange = (e) => {

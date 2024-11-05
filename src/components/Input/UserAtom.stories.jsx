@@ -14,7 +14,7 @@ const Template = (args) => {
 };
 
 export default {
-  title: 'Components/UserAtom',
+  title: 'Components/Input/UserAtom',
   component: UserAtom,
   render: Template,
 };

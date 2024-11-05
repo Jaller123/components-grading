@@ -2,7 +2,7 @@ import React from 'react';
 import LoginButtonAtom from './LoginButtonAtom';
 
 export default {
-  title: 'Components/LoginButtonAtom',
+  title: 'Components/Login/LoginButtonAtom',
   component: LoginButtonAtom,
   parameters: {
     docs: {
