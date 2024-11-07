@@ -2,7 +2,7 @@ import React from 'react';
 import RegisterButtonAtom from './RegisterButtonAtom';
 
 export default {
-  title: 'Components/Login/RegisterButtonAtom',
+  title: 'Components/Register/RegisterButtonAtom',
   component: RegisterButtonAtom,
   parameters: {
     docs: {

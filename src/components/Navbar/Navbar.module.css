@@ -1,0 +1,46 @@
+.navbar {
+    width: 1440px;
+    height: 145px;
+    flex-shrink: 0;
+    opacity: 0.5;
+    background: #FFE0E0;
+    display: flex;
+}
+
+.cartifylogo {
+    width: 117px;
+    height: 39px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: "Istok Web";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    font-variant: small-caps;
+    position: relative;
+    top: 30%;
+    left: 5%;
+}
+
+.navlinks {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: center;
+    list-style-type: none; 
+    gap: 70px; 
+    position: relative;
+    margin-top: 15%;
+    left: 100%;
+}
+
+.navlinks li a {
+    color: #363636;
+    text-decoration: none;
+    font-family: "Istok Web";
+    font-size: 20px;
+    font-weight: 400;
+    font-variant: small-caps;
+    text-align: center;
+}
