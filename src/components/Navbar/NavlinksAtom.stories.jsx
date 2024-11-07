@@ -1,8 +1,8 @@
-import Navlinks from "./NavlinksAtom";
+import NavlinksAtom from "./NavlinksAtom";
 
 export default {
-    title: 'Components/Navbar/Navlinks',
-    component: Navlinks
+    title: 'Components/Navbar/NavlinksAtom',
+    component: NavlinksAtom
 }
 
 export const Default = {

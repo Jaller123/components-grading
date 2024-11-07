@@ -44,3 +44,20 @@
     font-variant: small-caps;
     text-align: center;
 }
+
+.shoppingcarticon {
+    height: 24px;
+    width: 24px;
+    position: relative;
+    left: 60%;
+    top: 50px;
+}
+
+.welcomemessage {
+    color: #000;
+    font-family: "Istok Web";
+    font-size: 20px;
+    position: relative;
+    left: 47%;
+    top: 50px;
+}

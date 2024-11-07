@@ -1,7 +1,7 @@
 import React from "react"
 import styles from './Navbar.module.css'
 
-const Navlinks = () => {
+const NavlinksAtom = () => {
     return(
         <>
         <div>
@@ -15,4 +15,4 @@ const Navlinks = () => {
     )
 }
 
-export default Navlinks
+export default NavlinksAtom
