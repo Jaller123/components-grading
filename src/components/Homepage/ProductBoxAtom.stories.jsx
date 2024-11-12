@@ -1,4 +1,5 @@
 import ProductBoxAtom from "./ProductBoxAtom";
+import React from 'react';
 
 
 export default {
@@ -6,4 +7,12 @@ export default {
     component: ProductBoxAtom
 }
 
-export const Default = {}
+
+const Template = (args) => <ProductBoxAtom {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {
+  title: 'Modern Sofa',
+  image: 'https://via.placeholder.com/200',
+  price: 499.99,  
+};
