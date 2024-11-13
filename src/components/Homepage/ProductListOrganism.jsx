@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { getProducts } from '../api'
-import ProductListOrganism from './ProductListMolecule'
+import ProductListMolecule from './ProductListMolecule'
 
-const ProductPage = () => {
+const ProductListOrganism = () => {
     const [products, setProducts] = useState ([]);
     const [error, setError] = useState('')
 
@@ -10,6 +10,7 @@ const ProductPage = () => {
         const fetchProducts = async () => {
             try {
                 const data = await getProducts();
+                console.log(data);
                 setProducts(data)
             } catch (err) {
                 setError(err.message || 'Failed to fetch Products');
@@ -21,11 +22,10 @@ const ProductPage = () => {
 
     return (
         <div>
-            <h2>Products</h2>
             {error && <p style={{ color: 'red'}}>{error}</p>}
-            <ProductListOrganism products={products} />
+            <ProductListMolecule products={products} />
         </div>
     )
 }
 
-export default ProductPage;
+export default ProductListOrganism;

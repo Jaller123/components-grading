@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import ProductCardMolecule from './ProductCardMolecule'
 
-const ProductListOrganism = ({ products }) => (
+const ProductListMolecule = ({ products }) => (
     <div style={{ display: 'flex', flexWrap: 'wrap'}}>
         {products.map((product) => (
             <ProductCardMolecule key={product.id} product={product} />
@@ -10,7 +10,7 @@ const ProductListOrganism = ({ products }) => (
     </div>
 );
 
-ProductListOrganism.propTypes = {
+ProductListMolecule.propTypes = {
     products: PropTypes.arrayOf(
         PropTypes.shape({
             id: PropTypes.number.isRequired,
@@ -21,4 +21,4 @@ ProductListOrganism.propTypes = {
     ).isRequired
 };
 
-export default ProductListOrganism;
+export default ProductListMolecule;
