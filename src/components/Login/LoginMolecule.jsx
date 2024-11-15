@@ -1,4 +1,3 @@
-// src/components/Login/LoginMolecule.jsx
 import React, { useState } from 'react';
 import styles from './Login.module.css';
 import UserAtom from '../Input/UserAtom';
@@ -12,6 +11,7 @@ const LoginMolecule = () => {
   const [error, setError] = useState('');
   const [message, setMessage] = useState('');
 
+  // Handle login click with basic validation
   const handleLogin = async () => {
     if (!username || !password) {
       setError('Username and password are required.');
@@ -22,10 +22,10 @@ const LoginMolecule = () => {
     try {
       const data = await loginUser(username, password);
       setMessage(`Welcome ${data.user.username}!`);
-      setError(''); // Clear any error
+      setError('');
     } catch (err) {
-      setError(err.message || 'Incorrect credentials.');
-      setMessage(''); // Clear any success message
+      setError(err.message || 'Incorrect Credentials');
+      setMessage('');
     }
   };
 

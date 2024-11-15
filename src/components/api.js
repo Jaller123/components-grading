@@ -1,17 +1,10 @@
-// src/api.js
+const AUTH_API_URL = 'http://localhost:5000/api/auth';
+const PRODUCTS_API_URL = 'http://localhost:5000/api/products'
 
-const API_URL = 'http://localhost:5000/api/auth';
 
-/**
- * Registers a new user by sending a POST request to the backend.
- * @param {string} username - The username of the new user.
- * @param {string} password - The password of the new user.
- * @returns {Promise<object>} - The response data from the backend.
- * @throws {Error} - Throws an error if the registration fails.
- */
 export const registerUser = async (username, password) => {
   try {
-    const response = await fetch(`${API_URL}/register`, {
+    const response = await fetch(`${AUTH_API_URL}/register`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -24,23 +17,18 @@ export const registerUser = async (username, password) => {
       throw new Error(errorData.message || 'Registration failed');
     }
 
-    return await response.json(); // Return response data on success
+    return await response.json(); 
+
   } catch (error) {
     console.error("Registration error:", error.message);
     throw error;
   }
 };
 
-/**
- * Logs in a user by sending a POST request to the backend.
- * @param {string} username - The username of the user.
- * @param {string} password - The password of the user.
- * @returns {Promise<object>} - The response data from the backend, including token and user info.
- * @throws {Error} - Throws an error if the login fails.
- */
+
 export const loginUser = async (username, password) => {
   try {
-    const response = await fetch(`${API_URL}/login`, {
+    const response = await fetch(`${AUTH_API_URL}/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -53,9 +41,30 @@ export const loginUser = async (username, password) => {
       throw new Error(errorData.message || 'Login failed');
     }
 
-    return await response.json(); // Return response data on success
+    return await response.json(); 
   } catch (error) {
     console.error("Login error:", error.message);
+    throw error;
+  }
+};
+
+export const getProducts = async () => {
+  try {
+    const response = await fetch(PRODUCTS_API_URL, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if(!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.message || 'Failed to fetch products');
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error("Error fetching products", error.message);
     throw error;
   }
 };

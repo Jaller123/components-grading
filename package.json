@@ -12,17 +12,21 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "storybook": "^8.3.6",
-    "@storybook/react": "^8.3.6",
-    "@storybook/react-webpack5": "^8.3.6",
-    "@storybook/blocks": "^8.3.6",
-    "@storybook/addon-webpack5-compiler-swc": "^1.0.5",
-    "@storybook/addon-onboarding": "^8.3.6",
-    "@storybook/addon-links": "^8.3.6",
-    "@storybook/addon-essentials": "^8.3.6",
     "@chromatic-com/storybook": "^1.9.0",
-    "@storybook/test": "^8.3.6",
-    "@storybook/addon-interactions": "^8.3.6",
-    "prop-types": "^15.8.1"
+    "@storybook/addon-essentials": "8.3.6",
+    "@storybook/addon-interactions": "8.3.6",
+    "@storybook/addon-links": "8.3.6",
+    "@storybook/addon-onboarding": "8.3.6",
+    "@storybook/addon-webpack5-compiler-swc": "^1.0.5",
+    "@storybook/blocks": "8.3.6",
+    "@storybook/react": "8.3.6",
+    "@storybook/react-webpack5": "8.3.6",
+    "@storybook/test": "8.3.6",
+    "msw": "^2.6.4",
+    "prop-types": "^15.8.1",
+    "storybook": "8.3.6"
+  },
+  "dependencies": {
+    "msw-storybook-addon": "^2.0.4"
   }
 }
