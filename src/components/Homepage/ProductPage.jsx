@@ -1,9 +1,9 @@
-// src/components/HomePageOrganism.jsx
 import React from 'react';
 import NavbarMolecule from '../Navbar/NavbarMolecule';
 import ProductContainer from './ProductContainer';
 import ProductListOrganism from './ProductListOrganism';
 import HomebackgroundAtom from './HomebackgroundAtom';
+import FooterOrganism from '../Footer/FooterOrganism';
 import styles from './Homepage.module.css';
 
 const ProductPage = () => {
@@ -19,10 +19,11 @@ const ProductPage = () => {
 
                 <div className={styles.productList}>
                     <ProductListOrganism />
+
                 </div>
             </div>
         </div>
-    </div>
+    <FooterOrganism /></div>
     );
 };
 
