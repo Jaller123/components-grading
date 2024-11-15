@@ -1,9 +1,9 @@
 import React from 'react';
-import NavbarMolecule from '../Navbar/NavbarMolecule';
-import ProductContainer from './ProductContainer';
-import ProductListOrganism from './ProductListOrganism';
-import HomebackgroundAtom from './HomebackgroundAtom';
-import FooterOrganism from '../Footer/FooterOrganism';
+import NavbarMolecule from '../Navbar/Organisms/NavbarOrganism';
+import ProductContainer from './Atoms/ProductContainer';
+import ProductListOrganism from './Organisms/ProductListOrganism';
+import HomebackgroundAtom from './Atoms/HomebackgroundAtom';
+import FooterOrganism from '../Footer/Organisms/FooterOrganism';
 import styles from './Homepage.module.css';
 
 const ProductPage = () => {
