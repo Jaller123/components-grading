@@ -1,5 +1,5 @@
 .navbar {
-    width: 1440px;
+    min-width: 1571px;
     height: 145px;
     flex-shrink: 0;
     opacity: 0.8;
