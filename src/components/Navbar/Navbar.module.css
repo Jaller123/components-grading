@@ -12,7 +12,7 @@
     height: 39px;
     flex-shrink: 0;
     color: #000;
-    font-family: "Istok Web";
+    font-family: "Josefin Sans";
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
@@ -38,7 +38,7 @@
 .navlinks li a {
     color: #363636;
     text-decoration: none;
-    font-family: "Istok Web";
+    font-family: "Josefin Sans";
     font-size: 20px;
     font-weight: 400;
     font-variant: small-caps;
@@ -55,7 +55,7 @@
 
 .welcomemessage {
     color: #000;
-    font-family: "Istok Web";
+    font-family: "Josefin Sans";
     font-size: 20px;
     position: relative;
     left: 47%;
