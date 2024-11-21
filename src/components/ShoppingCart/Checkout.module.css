@@ -1,0 +1,110 @@
+.checkoutPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+.ordersContainer {
+    width: 1400px;
+    height: 835px;
+    background: #ffe0e0;
+    border-radius: 41px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.ordersSummary {
+    width: 1335px;
+    height: 621px;
+    background: #fff5f5;
+    border-radius: 50px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.productsList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.orderProduct {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 611px;
+    height: 126px;
+    background: #ffe0e0;
+    border-radius: 35px;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+.productName {
+    font-weight: bold;
+    color: #333;
+}
+
+.price {
+    font-weight: bold;
+    color: #333;
+}
+
+.trashIcon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.trashIcon:hover {
+    transform: scale(1.1); 
+    opacity: 0.8; 
+}
+
+.trashIconImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+}
+
+.totalSummary {
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #555;
+}
+

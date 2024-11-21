@@ -2,7 +2,7 @@ import React from 'react';
 import ContactFormOrganism from './ContactFormOrganism';
 
 export default {
-    title: 'Organisms/ContactFormOrganism',
+    title: 'Components/Contact/Organisms/ContactFormOrganism',
     component: ContactFormOrganism,
 };
 
