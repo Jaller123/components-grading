@@ -61,3 +61,22 @@
     left: 47%;
     top: 50px;
 }
+
+@media screen and (max-width: 1440px) {
+    .navbar {
+        min-width: 100%
+    }
+
+    .welcomemessage {
+        position: relative;
+        font-family: "Josefin Sans";
+        left: 37%;
+        top: 50px;
+    }
+
+    .shoppingcarticon {
+        position: relative;
+        left: 53%;
+        top: 50px;
+    }
+}

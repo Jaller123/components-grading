@@ -84,3 +84,7 @@
 .linkedin {
     background-image: url('../../assets/LinkedIn.png');
 }
+
+.footer {
+        position: relative;
+    }

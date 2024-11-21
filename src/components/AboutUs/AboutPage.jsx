@@ -15,7 +15,7 @@ const AboutPage = () => {
                     <SubtitleAtom text="We have everything you need for your home!"/>
                     <AboutSectionOrganism />
                 </div>
-                <FooterOrganism />
+                <FooterOrganism className={styles.footer} />
         </div>
     )
 }
