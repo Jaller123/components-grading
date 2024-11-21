@@ -133,3 +133,9 @@
   object-fit: cover;
   z-index: -1;
 }
+
+@media screen and (max-width: 1440px) {
+  .footer {
+      padding: 10px;
+  }
+}
