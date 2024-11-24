@@ -23,7 +23,7 @@ const ProductPage = () => {
                 </div>
             </div>
         </div>
-    <FooterOrganism /></div>
+    <FooterOrganism className={styles.footer}/></div>
     );
 };
 
