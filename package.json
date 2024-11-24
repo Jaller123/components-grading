@@ -1,9 +1,10 @@
 {
-  "name": "components-grading",
+  "name": "cartify-frontend",
   "version": "1.0.0",
   "description": "",
   "main": "./src/index.js",
   "scripts": {
+    "build": "vite build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
@@ -27,6 +28,8 @@
     "storybook": "8.3.6"
   },
   "dependencies": {
-    "msw-storybook-addon": "^2.0.4"
+    "msw-storybook-addon": "^2.0.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   }
 }

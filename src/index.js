@@ -1,3 +1,3 @@
-import Sample from './components/Sample';
+import ProductPage from './components/Homepage/ProductPage';
 
-export {Sample}
+export { ProductPage };
