@@ -23,9 +23,11 @@
     "@storybook/react": "8.3.6",
     "@storybook/react-webpack5": "8.3.6",
     "@storybook/test": "8.3.6",
+    "@vitejs/plugin-react": "^4.3.4",
     "msw": "^2.6.4",
     "prop-types": "^15.8.1",
-    "storybook": "8.3.6"
+    "storybook": "8.3.6",
+    "vite": "^6.0.0"
   },
   "dependencies": {
     "msw-storybook-addon": "^2.0.4",

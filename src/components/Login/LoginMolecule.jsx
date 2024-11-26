@@ -3,9 +3,10 @@ import styles from './Login.module.css';
 import UserAtom from '../Input/UserAtom';
 import PasswordAtom from '../Input/PasswordAtom';
 import LoginButtonAtom from './LoginButtonAtom';
+import CreateAccountBtnAtom from './CreateAccountBtnAtom'
 import { loginUser } from '../api';
 
-const LoginMolecule = () => {
+const LoginMolecule = ({ onCreateAccount }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -34,6 +35,7 @@ const LoginMolecule = () => {
       <UserAtom username={username} onUsernameChange={setUsername} />
       <PasswordAtom password={password} onPasswordChange={setPassword} />
       <LoginButtonAtom onClick={handleLogin} />
+      <CreateAccountBtnAtom onClick={onCreateAccount} label="Create An Account" />
       {error && <div className={styles.errorText}>{error}</div>}
       {message && <div className={styles.successText}>{message}</div>}
     </div>
