@@ -4,9 +4,10 @@ import styles from '../Login/Login.module.css'
 import UserAtom from '../Input/UserAtom';
 import PasswordAtom from '../Input/PasswordAtom';
 import RegisterButtonAtom from './RegisterButtonAtom';
+import AlreadyHaveAnAccBtnAtom from './AlreadyHaveAccBtnAtom'
 import { registerUser } from '../api';
 
-const RegisterMolecule = () => {
+const RegisterMolecule = ({ onAlreadyHaveAccount }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -29,11 +30,14 @@ const RegisterMolecule = () => {
     }
   };
 
+
+
   return (
     <div className={styles.container}>
       <UserAtom username={username} onUsernameChange={setUsername} />
       <PasswordAtom password={password} onPasswordChange={setPassword} />
       <RegisterButtonAtom onClick={handleRegister} label="Register" /> {/* Renamed button label */}
+      <AlreadyHaveAnAccBtnAtom onClick={onAlreadyHaveAccount} label="AlreadyHaveAnAcc" />
       {error && <div className={styles.errorText}>{error}</div>}
       {message && <div className={styles.successText}>{message}</div>}
     </div>
