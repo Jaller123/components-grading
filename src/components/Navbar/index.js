@@ -1,3 +1,3 @@
-import NavbarMolecule from './Organisms/NavbarOrganism';
+import NavbarOrganism from './Organisms/NavbarOrganism';
 
-export {NavbarMolecule as Navbar}
+export {NavbarOrganism as Navbar}
