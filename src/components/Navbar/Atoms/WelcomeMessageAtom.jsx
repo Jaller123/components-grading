@@ -1,14 +1,13 @@
-import React from 'react'
-import styles from '../Navbar.module.css'
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from '../Navbar.module.css';
 
-const WelcomeMessageAtom = () => {
-    return(
-        <>
-            <div className={styles.welcomemessage}>
-                Welcome, Kenath
-            </div>
-        </>
-    )
-}
+const WelcomeMessageAtom = ({ username }) => {
+    return <div className={styles.welcomemessage}>Welcome, {username}</div>;
+};
 
-export default WelcomeMessageAtom
+WelcomeMessageAtom.propTypes = {
+  username: PropTypes.string.isRequired,
+};
+
+export default WelcomeMessageAtom;
