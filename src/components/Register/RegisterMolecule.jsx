@@ -22,6 +22,8 @@ const RegisterMolecule = ({ onAlreadyHaveAccount }) => {
 
     try {
       const data = await registerUser(username, password);
+      localStorage.setItem('token', data.token)
+      console.log('Token:', data.token)
       setMessage(data.message || 'New user registered successfully!');
       setError(''); // Clear any error
     } catch (err) {

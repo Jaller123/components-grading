@@ -6,13 +6,12 @@ import LoginButtonAtom from './LoginButtonAtom';
 import CreateAccountBtnAtom from './CreateAccountBtnAtom'
 import { loginUser } from '../api';
 
-const LoginMolecule = ({ onCreateAccount }) => {
+const LoginMolecule = ({ onCreateAccount, onLoginSuccess  }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [message, setMessage] = useState('');
 
-  // Handle login click with basic validation
   const handleLogin = async () => {
     if (!username || !password) {
       setError('Username and password are required.');
@@ -22,8 +21,13 @@ const LoginMolecule = ({ onCreateAccount }) => {
 
     try {
       const data = await loginUser(username, password);
-      setMessage(`Welcome ${data.user.username}!`);
+      localStorage.setItem('token', data.token)
+      console.log('Token:', data.token)
+      setMessage(`Welcome ${data.user.username}! Redirecting...`);
       setError('');
+      setTimeout(() => {
+        if (onLoginSuccess) onLoginSuccess(); 
+      }, 1000);
     } catch (err) {
       setError(err.message || 'Incorrect Credentials');
       setMessage('');
@@ -34,7 +38,7 @@ const LoginMolecule = ({ onCreateAccount }) => {
     <div className={styles.container}>
       <UserAtom username={username} onUsernameChange={setUsername} />
       <PasswordAtom password={password} onPasswordChange={setPassword} />
-      <LoginButtonAtom onClick={handleLogin} />
+      <LoginButtonAtom onClick={handleLogin} /> 
       <CreateAccountBtnAtom onClick={onCreateAccount} label="Create An Account" />
       {error && <div className={styles.errorText}>{error}</div>}
       {message && <div className={styles.successText}>{message}</div>}

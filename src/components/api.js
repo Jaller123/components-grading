@@ -1,6 +1,14 @@
 const AUTH_API_URL = 'http://localhost:5000/api/auth';
 const PRODUCTS_API_URL = 'http://localhost:5000/api/products'
 
+const getToken = () => {
+  return localStorage.getItem('token');
+};
+
+const getAuthHeader = () => {
+  const token = getToken()
+  return token ? { 'x-auth-token' : token } : {}
+};
 
 export const registerUser = async (username, password) => {
   try {
@@ -54,6 +62,7 @@ export const getProducts = async () => {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
+        ...getAuthHeader(), 
       },
     });
 
