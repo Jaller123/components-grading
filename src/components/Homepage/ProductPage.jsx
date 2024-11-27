@@ -1,4 +1,3 @@
-import React from 'react';
 import NavbarMolecule from '../Navbar/Organisms/NavbarOrganism';
 import ProductContainer from './Atoms/ProductContainer';
 import ProductListOrganism from './Organisms/ProductListOrganism';
@@ -7,6 +6,8 @@ import FooterOrganism from '../Footer/Organisms/FooterOrganism';
 import styles from './Homepage.module.css';
 
 const ProductPage = () => {
+
+
     return (
     <div className={styles.homePage}>
         <HomebackgroundAtom />
