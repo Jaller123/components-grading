@@ -1,22 +1,20 @@
-import React from "react"
-import styles from "../Navbar.module.css"
-import Navlinks from "../Molecules/NavlinksMolecule";
-import CartifyLogoAtom from "../Atoms/CartifyLogoAtom";
-import ShoppingCartAtom from "../Atoms/ShoppingCartAtom";
-import WelcomeMessageAtom from "../Atoms/WelcomeMessageAtom";
+import React from 'react';
+import styles from '../Navbar.module.css';
+import CartifyLogoAtom from '../Atoms/CartifyLogoAtom';
+import NavlinksMolecule from '../Molecules/NavlinksMolecule';
+import ShoppingCartAtom from '../Atoms/ShoppingCartAtom';
+import WelcomeMessageAtom from '../Atoms/WelcomeMessageAtom';
 
-const NavbarMolecule = () => {
+const NavbarMolecule = ({ username }) => {
     return (
-        <>
-                <nav className={styles.navbar}>
-                    <CartifyLogoAtom />
-                    <Navlinks />
-                    <ShoppingCartAtom />
-                    <WelcomeMessageAtom />
-                </nav>
-        </>
+      <nav className={styles.navbar}>
+        <CartifyLogoAtom />
+        <NavlinksMolecule />
+        <ShoppingCartAtom />
+        <WelcomeMessageAtom username={username} />
+      </nav>
     );
-};
+  };
+  
 
-
-export default NavbarMolecule
+export default NavbarMolecule;

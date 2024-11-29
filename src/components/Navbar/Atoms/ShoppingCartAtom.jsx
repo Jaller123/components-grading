@@ -3,10 +3,12 @@ import ShoppingCartIcon from '../../../assets/ShoppingCart.png';
 import styles from '../Navbar.module.css'
 
 
-const ShoppingCartAtom = () => {
+const ShoppingCartAtom = ({ onClick }) => {
     return(
         <>
-        <img className={styles.shoppingcarticon} src={ShoppingCartIcon} alt="Shopping Cart Icon" />
+        <a onClick={onClick} href="/checkout">
+        <img className={styles.shoppingcarticon} 
+        src={ShoppingCartIcon} alt="Shopping Cart Icon" /></a>
         </>
     )
 }

@@ -9,9 +9,10 @@ const OrderSummaryOrganism = ({ products, total, onRemove }) => {
                 {products.map((product, index) => (
                     <OrderProductMolecule
                         key={index}
-                        name={product.name}
+                        image={product.image}
+                        name={product.title}
                         price={product.price}
-                        onRemove={() => onRemove(index)}
+                        onRemove={() => onRemove(product.id)}
                     />
                 ))}
             </div>
