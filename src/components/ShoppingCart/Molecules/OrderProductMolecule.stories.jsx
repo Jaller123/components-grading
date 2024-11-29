@@ -6,10 +6,4 @@ export default {
     component: OrderProductMolecule,
 };
 
-export const Default = () => (
-    <OrderProductMolecule
-        name="Wooden Chair"
-        price={49.99}
-        onRemove={() => alert('Product removed')}
-    />
-);
+export const Default = () => {}

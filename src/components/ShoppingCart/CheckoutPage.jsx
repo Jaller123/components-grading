@@ -4,26 +4,20 @@ import FooterOrganism from '../Footer/Organisms/FooterOrganism'
 import OrdersContainerOrganism from './Organisms/OrdersContainerOrganism'
 import styles from './Checkout.module.css'
 
-const CheckoutPage = () => {
-    const [products, setProducts] = useState([
-        { name: 'Wooden Chair', price: 49.99 },
-    ])
+const CheckoutPage = ({ username, products, removeFromCart }) => {
+  const total = products.reduce((sum, product) => sum + product.price, 0);
+  console.log('Products in checkout:', products); 
+  return (
+    <div className={styles.checkoutPage}>
+      <NavbarOrganism username={username} />
+      <OrdersContainerOrganism
+        products={products}
+        total={total}
+        onRemove={removeFromCart}
+      />
+      <FooterOrganism />
+    </div>
+  );
+};
 
-    const total = products.reduce((sum, product) => product.price, 0)
-
-    const handleRemoveProduct = (index) => {
-        const updatedProducts = [...products]
-        updatedProducts.splice(index, 1);
-        setProducts(updatedProducts)
-    }
-
-    return(
-        <div className={styles.checkoutPage}>
-            <NavbarOrganism />
-            <OrdersContainerOrganism products={products} total={total} onRemove={handleRemoveProduct}/>
-            <FooterOrganism />
-        </div>
-    )
-}
-
-export default CheckoutPage
+export default CheckoutPage;
