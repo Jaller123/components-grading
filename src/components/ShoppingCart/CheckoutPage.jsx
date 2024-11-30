@@ -4,7 +4,7 @@ import FooterOrganism from '../Footer/Organisms/FooterOrganism'
 import OrdersContainerOrganism from './Organisms/OrdersContainerOrganism'
 import styles from './Checkout.module.css'
 
-const CheckoutPage = ({ username, products, removeFromCart }) => {
+const CheckoutPage = ({ username, products, removeFromCart, onCompleteOrder }) => {
   const total = products.reduce((sum, product) => sum + product.price, 0);
   console.log('Products in checkout:', products); 
   return (
@@ -14,6 +14,7 @@ const CheckoutPage = ({ username, products, removeFromCart }) => {
         products={products}
         total={total}
         onRemove={removeFromCart}
+        onCompleteOrder={onCompleteOrder}
       />
       <FooterOrganism />
     </div>
