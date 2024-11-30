@@ -117,3 +117,23 @@
     background-color: #555;
 }
 
+.orderCompletePage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+  }
+  
+  .successMessage {
+    margin: 50px 0;
+    font-size: 2.5rem;
+    color: #28a745;
+  }
+  
+  button {
+    margin-top: 20px;
+  }
+  
+
