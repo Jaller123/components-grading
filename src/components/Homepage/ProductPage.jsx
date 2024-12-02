@@ -6,11 +6,11 @@ import HomebackgroundAtom from "./Atoms/HomebackgroundAtom";
 import FooterOrganism from "../Footer/Organisms/FooterOrganism";
 import styles from "./Homepage.module.css";
 
-const ProductPage = ({ username, addToCart }) => {
+const ProductPage = ({ username, addToCart, onLogout }) => {
   return (
     <div className={styles.homePage}>
       <HomebackgroundAtom />
-      <NavbarMolecule username={username} />
+      <NavbarMolecule username={username} onLogout={onLogout}/>
       <div className={styles.productBackground}>
         <ProductContainer />
         <div className={styles.productList}>

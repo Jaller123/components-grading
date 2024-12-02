@@ -6,7 +6,7 @@
     background-color: #fdeae8;
     color: #333;
     margin-top: 10%;
-    width: 100%;
+    min-width: 1821px;
 }
 
 .columns {
