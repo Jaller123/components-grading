@@ -3,7 +3,7 @@ import styles from '../Homepage.module.css'
 
 const ProductContainer = () => {
   return (
-    <div className={styles.productContainer}>ProductContainer</div>
+    <div className={styles.productContainer}></div>
   )
 }
 

@@ -6,6 +6,9 @@ export default {
     title: 'Components/Navbar/Organism/NavbarOrganism',
     component: NavbarOrganism,
 }
-
-export const Default = {
-}
+export const Default = () => (
+    <NavbarOrganism
+      username="John Doe"
+      onLogout={() => alert("Logged out and navigated to login page!")}
+    />
+  );
