@@ -1,10 +1,12 @@
 .navbar {
-    min-width: 1861px;
+    min-width: 1865px;
     height: 145px;
     flex-shrink: 0;
     opacity: 0.8;
     background: #FFE0E0;
     display: flex;
+    position: relative;
+    bottom: 8px;
 }
 
 .cartifylogo {

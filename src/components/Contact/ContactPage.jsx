@@ -5,19 +5,18 @@ import TitleAtom from './Atoms/TitleAtom'
 import ContactFormOrganism from './Organisms/ContactFormOrganism'
 import styles from './Contact.module.css'
 
-const ContactPage = () => {
+const ContactPage = ({ username, onLogout }) => {
   return (
-      <div className={styles.contactPage}>
-          <NavbarOrganism />
-          <div className={styles.mainContent}>
+      <>
+          <NavbarOrganism username={username} onLogout={onLogout}/>
+          <div>
               <TitleAtom text="Contact" />
               <div className={styles.formContainer}>
                 <ContactFormOrganism />
               </div>
+              <FooterOrganism className={styles.footer}/>
           </div>
-          {/* Footer */}
-          <FooterOrganism className={styles.footer}/>
-      </div>
+      </>
   );
 };
 
