@@ -6,7 +6,7 @@ import ShoppingCartAtom from '../Atoms/ShoppingCartAtom';
 import WelcomeMessageAtom from '../Atoms/WelcomeMessageAtom';
 import LogoutButtonAtom from '../Atoms/LogoutButtonAtom'
 
-const NavbarMolecule = ({ username, onLogout }) => {
+const NavbarOrganism = ({ username, onLogout }) => {
     return (
       <nav className={styles.navbar}>
         <CartifyLogoAtom />
@@ -19,4 +19,4 @@ const NavbarMolecule = ({ username, onLogout }) => {
   };
   
 
-export default NavbarMolecule;
+export default NavbarOrganism;

@@ -1,5 +1,5 @@
 import React from "react";
-import NavbarMolecule from "../Navbar/Organisms/NavbarOrganism";
+import NavbarOrganism from "../Navbar/Organisms/NavbarOrganism";
 import ProductContainer from "./Atoms/ProductContainer";
 import ProductListOrganism from "./Organisms/ProductListOrganism";
 import HomebackgroundAtom from "./Atoms/HomebackgroundAtom";
@@ -10,7 +10,7 @@ const ProductPage = ({ username, addToCart, onLogout }) => {
   return (
     <div className={styles.homePage}>
       <HomebackgroundAtom />
-      <NavbarMolecule username={username} onLogout={onLogout}/>
+      <NavbarOrganism username={username} onLogout={onLogout}/>
       <div className={styles.productBackground}>
         <ProductContainer />
         <div className={styles.productList}>
