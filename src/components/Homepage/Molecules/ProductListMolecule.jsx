@@ -1,8 +1,8 @@
-import React from "react";
+import React, { memo } from "react";
 import PropTypes from "prop-types";
 import ProductCardMolecule from "./ProductCardMolecule";
 
-const ProductListMolecule = ({ products, addToCart }) => (
+const ProductListMolecule = memo(({ products, addToCart }) => (
   <div style={{ display: "flex", flexWrap: "wrap" }}>
     {products.map((product) => (
       <ProductCardMolecule
@@ -12,7 +12,7 @@ const ProductListMolecule = ({ products, addToCart }) => (
       />
     ))}
   </div>
-);
+));
 
 ProductListMolecule.propTypes = {
   products: PropTypes.arrayOf(
