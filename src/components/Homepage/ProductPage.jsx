@@ -1,4 +1,5 @@
 import React from "react";
+import { useCart } from '../../../../cartify-app/src/assets/context/CartContext';
 import NavbarOrganism from "../Navbar/Organisms/NavbarOrganism";
 import ProductContainer from "./Atoms/ProductContainer";
 import ProductListOrganism from "./Organisms/ProductListOrganism";
@@ -6,7 +7,10 @@ import HomebackgroundAtom from "./Atoms/HomebackgroundAtom";
 import FooterOrganism from "../Footer/Organisms/FooterOrganism";
 import styles from "./Homepage.module.css";
 
-const ProductPage = ({ username, addToCart, onLogout }) => {
+const ProductPage = ({ username, onLogout }) => {
+
+  const { addToCart } = useCart();
+
   return (
     <div className={styles.homePage}>
       <HomebackgroundAtom />
@@ -22,4 +26,4 @@ const ProductPage = ({ username, addToCart, onLogout }) => {
   );
 };
 
-export default ProductPage;
+export default React.memo(ProductPage);

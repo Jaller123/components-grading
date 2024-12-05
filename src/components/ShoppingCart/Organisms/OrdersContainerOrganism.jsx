@@ -3,6 +3,7 @@ import TitleAtom from '../Atoms/TitleAtom';
 import OrderSummaryOrganism from "./OrderSummaryOrganism";
 import ButtonAtom from '../Atoms/ButtonAtom';
 import styles from '../Checkout.module.css';
+import PropTypes from "prop-types";
 
 const OrdersContainerOrganism = ({ products, total, onRemove, onCompleteOrder }) => {
     const handleCheckout = () => {
@@ -22,6 +23,13 @@ const OrdersContainerOrganism = ({ products, total, onRemove, onCompleteOrder })
             <ButtonAtom text="Checkout" onClick={handleCheckout}/>
         </div>
     );
+};
+
+OrdersContainerOrganism.propTypes = {
+  products: PropTypes.array.isRequired,
+  total: PropTypes.number.isRequired,
+  onRemove: PropTypes.func.isRequired,
+  onCompleteOrder: PropTypes.func.isRequired, 
 };
 
 export default OrdersContainerOrganism;

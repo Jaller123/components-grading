@@ -1,20 +1,20 @@
-import React from "react";
+import React, { memo } from "react"; 
 import PropTypes from "prop-types";
 import ProductBoxAtom from "../Atoms/ProductBoxAtom";
 
-const ProductCardMolecule = ({ product, addToCart }) => {
+const ProductCardMolecule = memo(({ product, addToCart }) => {
   if (!product) return null;
 
   return (
     <ProductBoxAtom
-      id={product.id} 
+      id={product.id}
       title={product.title}
       image={product.image}
       price={product.price}
-      addToCart={addToCart} 
+      addToCart={addToCart}
     />
   );
-};
+})
 
 ProductCardMolecule.propTypes = {
   product: PropTypes.shape({
