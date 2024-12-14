@@ -4,6 +4,7 @@ import UserAtom from '../Input/UserAtom';
 import PasswordAtom from '../Input/PasswordAtom';
 import LoginButtonAtom from './LoginButtonAtom';
 import CreateAccountBtnAtom from './CreateAccountBtnAtom'
+import backgroundImage from '../../assets/loginbg.jpeg';
 import { loginUser } from '../api';
 
 const LoginMolecule = ({ onCreateAccount, onLoginSuccess  }) => {
@@ -35,7 +36,11 @@ const LoginMolecule = ({ onCreateAccount, onLoginSuccess  }) => {
   };
 
   return (
+  <div className={styles.background}
+    style={{ backgroundImage: `url(${backgroundImage})` }}>
     <div className={styles.container}>
+    <h1>Cartify</h1>
+    <h4 className={styles.h4}>Please enter your credentials to log in</h4>
       <UserAtom username={username} onUsernameChange={setUsername} />
       <PasswordAtom password={password} onPasswordChange={setPassword} />
       <LoginButtonAtom onClick={handleLogin} /> 
@@ -43,6 +48,7 @@ const LoginMolecule = ({ onCreateAccount, onLoginSuccess  }) => {
       {error && <div className={styles.errorText}>{error}</div>}
       {message && <div className={styles.successText}>{message}</div>}
     </div>
+  </div>
   );
 };
 

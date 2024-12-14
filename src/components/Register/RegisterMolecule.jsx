@@ -5,6 +5,7 @@ import UserAtom from '../Input/UserAtom';
 import PasswordAtom from '../Input/PasswordAtom';
 import RegisterButtonAtom from './RegisterButtonAtom';
 import AlreadyHaveAnAccBtnAtom from './AlreadyHaveAccBtnAtom'
+import backgroundImage from '../../assets/loginbg.jpeg';
 import { registerUser } from '../api';
 
 const RegisterMolecule = ({ onAlreadyHaveAccount }) => {
@@ -35,14 +36,19 @@ const RegisterMolecule = ({ onAlreadyHaveAccount }) => {
 
 
   return (
+  <div className={styles.background}
+  style={{ backgroundImage: `url(${backgroundImage})` }}>
     <div className={styles.container}>
+      <h1>Cartify</h1>
+      <h4 className={styles.h4}>Please enter your desired credentials to create an account</h4>
       <UserAtom username={username} onUsernameChange={setUsername} />
       <PasswordAtom password={password} onPasswordChange={setPassword} />
-      <RegisterButtonAtom onClick={handleRegister} label="Register" /> {/* Renamed button label */}
+      <RegisterButtonAtom onClick={handleRegister} label="Register" /> 
       <AlreadyHaveAnAccBtnAtom onClick={onAlreadyHaveAccount} label="AlreadyHaveAnAcc" />
       {error && <div className={styles.errorText}>{error}</div>}
       {message && <div className={styles.successText}>{message}</div>}
     </div>
+  </div>
   );
 };
 

@@ -1,60 +1,75 @@
-/* src/components/Login/Login.module.css */
+
+.background {
+  background-image: url('/assets/loginbg.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  border: 2px solid gray;
-  padding: 20px;
-  width: 320px;
-  border-radius: 8px;
-  background-color: #f2f2f2;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 20px auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 32px;
+  background: #fff;
+  opacity: 0.85;
+  padding: 40px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  width: 380px;
+}
+
+.h4{
+  text-align: center;
 }
 
 .inputField {
   width: 100%;
-  padding: 10px;
-  margin: 8px 0;
+  padding: 12px;
+  margin: 10px 0;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 14px;
+  border-radius: 8px;
+  font-size: 16px;
 }
 
+
 .button {
-  padding: 12px 18px;
-  margin-top: 15px;
+  padding: 14px 20px;
+  margin-top: 20px;
   background-color: #007bff;
-  color: #fff;
+  color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   cursor: pointer;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .button:hover {
   background-color: #0056b3;
 }
 
-.label {
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
 .errorText {
   color: red;
   border: 1px dashed red;
-  padding: 5px;
-  margin-top: 10px;
+  padding: 10px;
+  margin-top: 15px;
   border-radius: 4px;
   font-weight: bold;
+  text-align: center;
 }
 
 .successText {
   color: green;
   border: 1px dashed green;
-  padding: 5px;
-  margin-top: 10px;
+  padding: 10px;
+  margin-top: 15px;
   border-radius: 4px;
   font-weight: bold;
+  text-align: center;
 }
