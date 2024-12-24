@@ -3,7 +3,7 @@ import styles from '../Contact.module.css'
 
 const InputFieldAtom = ({ placeholder, type = 'text'}) => (
   <div>
-    <input className={styles.input} type={type} placeholder={placeholder} />
+     <input type={type} placeholder={placeholder} className={styles.inputField} />
   </div>
 )
 

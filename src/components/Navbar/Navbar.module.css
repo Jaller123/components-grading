@@ -81,11 +81,10 @@
   .logoutButton:hover {
     background-color: #cc0000;
   }
-  
 
 @media screen and (max-width: 1440px) {
     .navbar {
-        min-width: 100%
+        min-width: 1425px;
     }
 
     .welcomemessage {
@@ -97,7 +96,7 @@
 
     .shoppingcarticon {
         position: relative;
-        left: 53%;
+        left: 90vh;
         top: 50px;
     }
 }
