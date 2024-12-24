@@ -50,9 +50,8 @@
   background-color: #fff;
 }
 
-
 .formContainer {
-  background-color: #FFE0E0;
+  background-color: #ffe0e0;
   width: 100%;
   max-width: 500px;
   padding: 200px;
@@ -90,18 +89,12 @@
   transform: scale(1.05);
 }
 
-
-.button:hover {
-  background-color: #555;
-}
-
 .footer {
-  right: 12%
+  right: 12%;
 }
 
 @media screen and (max-width: 1440px) {
   .footer {
-    
     left: 10%;
   }
 }
