@@ -12,7 +12,7 @@ const OrderSummaryOrganism = ({ products, total, onRemove }) => {
                         image={product.image}
                         name={product.title}
                         price={product.price}
-                        onRemove={() => onRemove(product.id)}
+                        onRemove={() => onRemove(index)}
                     />
                 ))}
             </div>
